@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // Create a class Calculator it's purpose is to perform basic arithmetic operations
 class Calculator {

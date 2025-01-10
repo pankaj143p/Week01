@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // create a class CountDigits it's purpose is to count the number of digits in a number
 class CountDigits {

@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // create a class ArmstrongNumber it's purpose is to check if a number is an Armstrong number or not
 class ArmstrongNumber {

@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // Create a class DayOfWeek it's purpose is to find the day of the week for a given date
 class DayOfWeek {

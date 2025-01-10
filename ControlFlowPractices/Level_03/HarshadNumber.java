@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // Create a class HarshadNumber it's purpose is to check if a number is a Harshad number or not
 class HarshadNumber {

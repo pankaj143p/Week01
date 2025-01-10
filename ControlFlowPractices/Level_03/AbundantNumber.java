@@ -1,4 +1,4 @@
-package Level_03;
+
 import java.util.Scanner;
 // create a class AbundantNumber it's purpose is to check if a number is an Abundant number or not
 class AbundantNumber {
