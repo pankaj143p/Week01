@@ -1,13 +1,13 @@
 import java.util.Scanner;
 public class NumberCheck {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int[] numbers = new int[5];
 
-        // Get user input for 5 numbers
+        // Get user sc for 5 numbers
         for (int i = 0; i < numbers.length; i++) {
             System.out.print("Enter number " + (i + 1) + ": ");
-            numbers[i] = input.nextInt();
+            numbers[i] = sc.nextInt();
             // Check if positive, negative, or zero
             if (numbers[i] > 0) {
                 if (numbers[i] % 2 == 0) {
@@ -31,6 +31,6 @@ public class NumberCheck {
             System.out.println("The first number is less than the last number.");
         }
 
-        input.close();
+        sc.close();
     }
 }

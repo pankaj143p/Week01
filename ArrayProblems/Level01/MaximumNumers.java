@@ -1,15 +1,15 @@
 import java.util.Scanner;
 public class MaximumNumers {
         public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in);
             // Create an array to store numbers
             double[] numbers = new double[10];
             double total = 0.0;
             int index = 0;
-            // Get user input for numbers
+            // Get user sc for numbers
             while (index < 10) {
                 System.out.print("Enter a number (0 or negative to stop): ");
-                double num = input.nextDouble();
+                double num = sc.nextDouble();
                 // Check if the number is 0 or negative
                 if (num <= 0) {
                     break;
@@ -26,7 +26,7 @@ public class MaximumNumers {
                 System.out.println(numbers[i]);
             } 
             System.out.println("\nTotal sum: " + total);
-            input.close();
+            sc.close();
         }
     }
     
