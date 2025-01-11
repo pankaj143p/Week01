@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class SalaryAndBonus {
+class EmployeeBonus {
    public static void main(String[] args) {
       // Create a Scanner Object
-      Scanner input = new Scanner(System.in);
+      Scanner sc = new Scanner(System.in);
 
       // Declare arrays to store salary, years of service, bonus, and new salary
       double[] salaries = new double[10];
@@ -15,15 +15,17 @@ class SalaryAndBonus {
       double totalBonus = 0;
       double totalOldSalary = 0;
       double totalNewSalary = 0;
+
       // Input the salary and years of service for 10 employees
       for (int i = 0; i < 10; i++) {
          while (true) {
             try {
                System.out.print("Enter the salary for employee " + (i + 1) + ": ");
-               salaries[i] = input.nextDouble();
+               salaries[i] = sc.nextDouble();
 
                System.out.print("Enter the years of service for employee " + (i + 1) + ": ");
-               yearsOfService[i] = input.nextInt();
+               yearsOfService[i] = sc.nextInt();
+
                // Validate input: salary should be positive, years of service should be non-negative
                if (salaries[i] <= 0 || yearsOfService[i] < 0) {
                   System.out.println("Invalid input! Salary should be greater than 0 and years of service should be non-negative.");
@@ -32,7 +34,7 @@ class SalaryAndBonus {
                break; // If input is valid, exit the loop
             } catch (Exception e) {
                System.out.println("Invalid input! Please enter valid numbers.");
-               input.next(); // Clear the invalid input
+               sc.next(); // Clear the invalid input
             }
          }
       }
@@ -54,11 +56,13 @@ class SalaryAndBonus {
          totalOldSalary += salaries[i];
          totalNewSalary += newSalaries[i];
       }
+
       // Display the total bonus payout, total old salary, and total new salary
       System.out.println("\nTotal bonus payout for all employees: " + totalBonus);
       System.out.println("Total old salary of all employees: " + totalOldSalary);
       System.out.println("Total new salary of all employees: " + totalNewSalary);
+
       // Close the Scanner Object
-      input.close();
+      sc.close();
    }
 }
