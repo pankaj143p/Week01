@@ -10,7 +10,7 @@ public class DemonstrateException {
     public static void handleNullPointerException(){
         String str = null;
         try {
-            System.out.println(str.length());
+            generateNullPointerException();
         } catch (NullPointerException e) {
             System.out.println("NullPointerException caught in method");
         }
