@@ -6,14 +6,13 @@ public class DemonstrateException {
         String str=null;
         System.out.println(str.length());
     }
-    // handle exception
+    // handle exception 
     public static void handleNullPointerException(){
         String str = null;
         try {
             System.out.println(str.length());
         } catch (NullPointerException e) {
-            // TODO: handle exception
-            System.out.println("NullPointerException caught");
+            System.out.println("NullPointerException caught in method");
         }
     }
         public static void main(String[] args) {
