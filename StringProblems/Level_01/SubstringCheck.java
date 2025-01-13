@@ -33,6 +33,8 @@ public class SubstringCheck {
         int end=Integer.parseInt(br.readLine());
         String subString1=getSubString(str, start, end);
         String subString2=getSubStringUsingsubstring(str, start, end);
+        System.out.println("substring by userdefine method: "+subString1);
+        System.out.println("substring by inbuild method: "+subString2);
         System.out.println(checkStrings(subString1, subString2) ? "both are equals" : "not equals");
         
     }
