@@ -36,7 +36,7 @@ public class RandomValues{
             System.out.print(num + " ");
         }
         // Display the result 
-        System.out.println("\n\nAverage: " + results[0]);
+        System.out.println("Average: " + results[0]);
         System.out.println("Minimum: " + results[1]);
         System.out.println("Maximum: " + results[2]);
     }
