@@ -47,20 +47,27 @@ import java.util.Scanner;
         return cnt+1;
     
         }
-        public static int[] minAndMaxWordLength(String arr[]){
-            int min=arr[0].length();
-            int max=arr[0].length();
-            for(int i=1;i<arr.length;i++){
+        // for finding longest and shortest word and length 
+        public static String[][] minAndMaxWordLength(String arr[]){
+            int min=(int)1e9;
+            int max=-(int)1e9;
+            String mnS="",mxS="";
+            for(int i=0;i<arr.length;i++){
                if(arr[i].length()>max){
                 max=arr[i].length();
+                mxS=arr[i];
                }
                if(arr[i].length()<min){
                 min=arr[i].length();
+                mnS=arr[i];
                }
             }
-               int res[]=new int[2];
-               res[0]=min;
-               res[1]=max;
+               String res[][]=new String[2][2];
+               res[0][0]=String.valueOf(min);
+               res[1][0]=String.valueOf(max);
+               res[0][1]=mnS;
+               res[1][1]=mxS;
+
 
                return res;
         }
@@ -68,16 +75,19 @@ import java.util.Scanner;
             Scanner sc = new Scanner(System.in);
             String str=sc.nextLine();
             int len=len(str);
-            int ans[]=new int[2];
+            // int ans[]=new int[2];
             String arr[]=split(str);
-            int lenArr[]=new int[arr.length];
-            for(int i=0; i<arr.length; i++){
-                lenArr[i]=String.(arr[i].length());
-            }
-          
-            // for(String it[] : ans){
-            //     System.out.println(it[0]+" "+it[1]+"\t");
+            String[][] ans=new String[2][2];
+            ans=minAndMaxWordLength(arr);
+            // for(int i=0; i<arr.length; i++){
+            //     lenArr[i]=(arr[i].length());
             // }
+            ans=minAndMaxWordLength(arr);
+            // System.out.println("Minimum length of words: "+ans[0]);
+           
+            for(String it[] : ans){
+                System.out.println(it[0]+" "+it[1]+"\t");
+            }
     
     
         }
