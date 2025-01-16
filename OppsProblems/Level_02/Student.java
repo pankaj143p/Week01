@@ -1,4 +1,4 @@
-// 
+// Write a program to create a class Student with the following members:
 class Student{
     public String name;
     public String rollNumber;
@@ -8,6 +8,7 @@ class Student{
         this.rollNumber=rollNumber;
         this.marks=marks;
     }
+    // method to calculate the grade of student
     public String Grade(int marks[]){
         int sum=0;
         for(int ii : marks) sum+=ii;
@@ -24,6 +25,7 @@ class Student{
             return "E";
         }
     }
+    //  method to display the details of student
     public void display(){
         System.out.println("Name of Student: "+name);
         System.out.println("Roll Number of Student: "+rollNumber);

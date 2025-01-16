@@ -1,8 +1,10 @@
 class PalindromeChecker{
     public String text;
+    // constructor to initialize the text
     PalindromeChecker(String text){
         this.text=text;
     }
+    // method to check the text is palindrome or not
     public boolean isPalindrome(){
         String updateText=text.replaceAll("\\s+", "").toLowerCase();
         for(int i=0; i<updateText.length(); i++){
@@ -12,6 +14,7 @@ class PalindromeChecker{
         }
         return true;
     }
+    // method to display the result
     public void display(){
         System.out.println(isPalindrome() ?"this text is palindrome ": "this is not a palindrom text");
     }

@@ -1,13 +1,6 @@
-//Program to Simulate an ATM
-//Problem Statement: Create a BankAccount class with attributes accountHolder,
-//        accountNumber, and balance. Add methods for:
-//Depositing money.
-//Withdrawing money (only if sufficient balance exists).
-//Displaying the current balance.
-//Explanation: The BankAccount class stores bank account details as
-//        attributes. The methods allow interaction with these attributes
-//to modify and view the account's state.
+
 import  java.util.Scanner;
+// create a class for BankAccount
 class BankAccount{
     private String accountHolder;
     private String getAccountNumber;
@@ -19,9 +12,11 @@ class BankAccount{
         this.getAccountNumber=getAccountNumber;
         this.balance=balance;
     }
+    // method to deposite money
     private int depositeMoney(int balance, int amount){
         return balance+amount;
     }
+    // method to withdraw money
     private int withdrawMoney(int balance,int amount){
         if(balance<amount){
             return -1;
@@ -30,6 +25,7 @@ class BankAccount{
         }
         return balance;
     }
+    // method to display the details of account holder
     private void display(){
         System.out.println("Name of Account Holder: "+accountHolder);
         System.out.println("Account number of Account Holder: "+getAccountNumber);

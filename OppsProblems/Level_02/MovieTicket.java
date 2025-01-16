@@ -1,23 +1,50 @@
-//Program to Model a Movie Ticket Booking System
-//Problem Statement: Create a MovieTicket class with attributes movieName,
-// seatNumber, and price. Add methods to:
-//Book a ticket (assign seat and update price).
-//Display ticket details.
-//        Explanation: The MovieTicket class organizes ticket information
-//        with attributes. The methods handle booking logic and display ticket details.
-class MovieDetails{
+import java.util.Scanner;
+// create a class for MovieTicket
+class MovieTicket {
+    private String movieName;
+    private String seatNumber;
+    private double price;
     MovieTicket(){
-
-    }
-}
-class MovieTicket{
-    public String movieName;
-    public int seatNumber;
-    public int price;
-    MovieTicket(String movieName, int seatNumber, int price){
-        this.movieName=MovieTicket;
+        this.movieName=movieName;
         this.seatNumber=seatNumber;
         this.price=price;
     }
+   // method to book ticket
+    public void bookTicket(String movieName, String seatNumber, double price) {
+        this.movieName = movieName;
+        this.seatNumber = seatNumber;
+        this.price = price;
+    }
+    // method to display ticket details
+    public void displayTicketDetails() {
+        System.out.println(movieName);
+        System.out.println(seatNumber);
+        System.out.println(price);
+    }
+    // method to update price
+    public void updatePrice(double newPrice) {
+        this.price = newPrice;
+    }
 
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        MovieTicket ticket = new MovieTicket();
+
+        String movieName = sc.nextLine();
+        String seatNumber = sc.nextLine();
+        double price = sc.nextDouble();
+
+        ticket.bookTicket(movieName, seatNumber, price);
+
+        ticket.displayTicketDetails();
+
+        double newPrice = sc.nextDouble();
+        ticket.updatePrice(newPrice);
+
+        ticket.displayTicketDetails();
+
+        sc.close();
+    }
 }

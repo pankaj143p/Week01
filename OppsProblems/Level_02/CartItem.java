@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+// create a class for ItemDetails
 class ItemDetails{
     String name;
     int price;
@@ -9,18 +10,20 @@ class ItemDetails{
         this.quantity=quantity;
     }
 }
+// create a class for CartItem
 class CartItem {
     private ArrayList<ItemDetails> items;
 
     CartItem() {
         items = new ArrayList<ItemDetails>();
     }
-
+    // method to add item in cart
     public void addItem(String itemName, int price, int quantity) {
         ItemDetails newItem = new ItemDetails(itemName, price, quantity);
         items.add(newItem);
         System.out.println(itemName + "item added: ");
     }
+    // method to remove item from cart
     public void removeItem(String itemName) {
 //        boolean flag=false;
         for (int i = 0; i < items.size(); i++) {
@@ -32,6 +35,7 @@ class CartItem {
         }
         System.out.println(itemName + " is not in the cart.");
     }
+    // method to calculate total cost
     public int totalCost(){
         int tc=0;
         if(items.isEmpty()){
@@ -43,6 +47,7 @@ class CartItem {
         }
         return tc;
     }
+    // method to display the items in cart
     public void display(){
         if (items.isEmpty()) {
             System.out.println("The cart is empty.");
