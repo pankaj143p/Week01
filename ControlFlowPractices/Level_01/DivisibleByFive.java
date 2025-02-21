@@ -1,5 +1,5 @@
 package Level_01;
-
+// for use import class
 import java.util.Scanner;
 class DivisibleByFive {
     public static void main(String[] args) {
