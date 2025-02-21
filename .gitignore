@@ -1,1 +1,10 @@
-*.class
+<<<<<<< HEAD
+# Changes in the main branch (current branch)
+*.log
+.env
+=======
+# Changes from the day_02 branch
+*.bak
+.idea/
+>>>>>>> day_02
+
