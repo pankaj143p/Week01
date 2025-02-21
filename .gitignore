@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Changes in the main branch (current branch)
 *.log
 .env
@@ -8,3 +9,10 @@
 .idea/
 >>>>>>> day_02
 
+=======
+*.class
+<<<<<<< HEAD
+.idea
+=======
+>>>>>>> day_01
+>>>>>>> day_06
